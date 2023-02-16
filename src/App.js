@@ -1,11 +1,11 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Profile from "./components/Profile";
+import "./styles/App.css";
+
+import ConditionalComponent from "./components/ConditionalComponent";
 
 function App() {
   return (
     <div className="App">
-      <Profile name="Jana" />
+      <ConditionalComponent></ConditionalComponent>
     </div>
   );
 }
