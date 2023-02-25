@@ -1,13 +1,21 @@
 import "./styles/App.css";
 
-import ConditionalComponent from "./components/ConditionalComponent";
+import { ROUTES } from "./constants/routes";
+import AppProvider from "./context/ContextProvider";
+import Login from "./pages/Login";
+import { Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <ConditionalComponent></ConditionalComponent>
-    </div>
+    <AppProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path={ROUTES.LOGIN} element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+    </AppProvider>
   );
-}
+};
 
 export default App;

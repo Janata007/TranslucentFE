@@ -1,0 +1,32 @@
+.button {
+  width: 100%;
+  padding: var(--small-padding) 0em;
+
+  outline: none;
+  border: none;
+  background-color: var(--light-accent);
+  border-radius: var(--button-radius);
+
+  color: var(--text-color);
+  font-size: var(--big-text);
+  text-align: center;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  opacity: 0.75;
+}
+
+/**MOBILE*/
+@media (max-width: 767px) {
+  .button {
+    padding: 0.25em 0em;
+  }
+}
