@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useAuth } from "../custom/useAuth";
+import { useAuth } from "../../custom/useAuth";
 import { useNavigate } from "react-router";
-import { ROUTES } from "../constants/routes";
-import { FORMS } from "../constants/forms";
-import { HelperFunctions } from "../util/helperFunctions";
-import Button from "./helper/Button";
-import AuthService from "../api/AuthService";
+import { ROUTES } from "../../constants/routes";
+import { FORMS } from "../../constants/forms";
+import { HelperFunctions } from "../../util/helperFunctions";
+import Button from "../helper/Button";
+import AuthService from "../../api/AuthService";
 
 const LoginForm = () => {
   const { login } = useAuth();

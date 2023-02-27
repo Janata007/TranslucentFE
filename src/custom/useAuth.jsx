@@ -10,7 +10,6 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useSessionStorage("user", null);
   const navigate = useNavigate();
   const isAdmin = user?.roles.includes("Admin");
-  const isEditor = user?.roles.includes("Editor");
 
   const login = async (data) => {
     setUser(data);
@@ -26,7 +25,6 @@ export const AuthProvider = ({ children }) => {
     () => ({
       user,
       isAdmin,
-      isEditor,
       login,
       logout,
     }),

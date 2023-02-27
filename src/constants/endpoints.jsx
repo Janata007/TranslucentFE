@@ -1,13 +1,11 @@
 const BASE_URL_DEV = "http://localhost:9191";
-const BASE_URL_PRODUCTION = "";
 
 const ENDPOINTS = {
   //WORK_SERVICE
   WORK_SERVICE: "work",
   GET_TASKS_FOR_USER: "tasks",
-  CREATE_TASK: "create-task",
   UPDATE_TASK: "update-task",
-  DELETE_TASK_BY_ID: "delete-task-by-id",
+  DELETE_TASK_BY_ID: "remove",
   TOGGLE_TASK_HIDDEN: "toggle-task-visibility",
   TOGGLE_USER_FOR_TASK: "toggle-user-for-task",
 
@@ -16,14 +14,14 @@ const ENDPOINTS = {
   GET_ALL_USERS: "all",
 
   //AUTH
-  LOGIN: "login",
-  REGISTER: "register",
+  LOGIN: "authenticate",
+  REGISTER: "save",
 };
 
 const development = {
   //WORK SERVICE
   GET_TASKS_FOR_USER: `${BASE_URL_DEV}/${ENDPOINTS.WORK_SERVICE}/${ENDPOINTS.GET_TASKS_FOR_USER}`,
-  CREATE_TASK: `${BASE_URL_DEV}/${ENDPOINTS.WORK_SERVICE}/${ENDPOINTS.CREATE_TASK}`,
+  CREATE_TASK: `${BASE_URL_DEV}/${ENDPOINTS.WORK_SERVICE}`,
   DELETE_TASK_BY_ID: `${BASE_URL_DEV}/${ENDPOINTS.WORK_SERVICE}/${ENDPOINTS.DELETE_TASK_BY_ID}`,
   TOGGLE_TASK_HIDDEN: `${BASE_URL_DEV}/${ENDPOINTS.WORK_SERVICE}/${ENDPOINTS.TOGGLE_TASK_HIDDEN}`,
   TOGGLE_USER_FOR_TASK: `${BASE_URL_DEV}/${ENDPOINTS.WORK_SERVICE}/${ENDPOINTS.TOGGLE_USER_FOR_TASK}`,
@@ -36,7 +34,6 @@ const development = {
   REGISTER: `${BASE_URL_DEV}/${ENDPOINTS.REGISTER}`,
 };
 
-const ENDPOINT__URLS =
-  process.env.NODE_ENV === "development" ? development : production;
+const ENDPOINT__URLS = development;
 
 export default ENDPOINT__URLS;

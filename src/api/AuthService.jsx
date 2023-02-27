@@ -11,8 +11,8 @@ const AuthService = {
     }).then(async (response) => {
       const requestResult = await response.json();
 
-      if (requestResult.statusCode === 200) return requestResult.payload;
-      else throw new Error(requestResult.message);
+      if (requestResult.statusCode === 200) return requestResult.jwtToken;
+      else throw new Error("error");
     });
   },
 
@@ -24,13 +24,12 @@ const AuthService = {
       },
       body: JSON.stringify({
         ...userToRegister,
-        email: userToRegister.username,
       }),
     }).then(async (response) => {
       const requestResult = await response.json();
 
-      if (requestResult.statusCode === 201) return;
-      else throw new Error(requestResult.message);
+      if (requestResult.statusCode === 200) return;
+      else throw new Error("error");
     });
   },
 };

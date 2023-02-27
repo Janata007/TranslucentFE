@@ -1,7 +1,7 @@
 import "../styles/pages/Login.css";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router";
-import LoginForm from "../components/LoginForm";
+import LoginForm from "../components/forms/LoginForm";
 import { ROUTES } from "../constants/routes";
 import { useAuth } from "../custom/useAuth";
 
